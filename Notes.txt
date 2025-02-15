@@ -1,0 +1,5 @@
+Default root component
+Don't need to explore the .nuxt folder
+.gitignore - for version control 
+Pages folder will contain your different vue files
+Vue files in /layouts can wrap pages in the application to all have a standardised layout
