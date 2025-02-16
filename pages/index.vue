@@ -65,31 +65,30 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { ref } from 'vue';
   import { useTodoStore } from '~/stores/todolist';
   import { CirclePlus, Undo2, Trash2 } from 'lucide-vue-next';
+
+  import type { Todo } from '~/stores/todolist';
 
   definePageMeta({
     layout: 'default'
   });
 
-  // Reference to input text
-  const newTodoText = ref('');
+  const newTodoText = ref<string>('');
 
-  // Load pinia store
   const todoStore = useTodoStore();
 
-  // Add new todo
-  const addNewTodo = () => {
+  const addNewTodo = (): void => {
     if (newTodoText.value.trim()) {
       todoStore.addTodo(newTodoText.value);
       newTodoText.value = ''; // Clear input after submit
     }
   };
 
-  // Delay effect
-  const handleCheckboxChange = (todo) => {
+  // Delay effect for items
+  const handleCheckboxChange = (todo: Todo): void => {
     todo.completed = !todo.completed;
     setTimeout(() => {
       todoStore.toggleTodo(todo.id);
