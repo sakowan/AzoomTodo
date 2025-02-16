@@ -115,7 +115,7 @@
   }
 
   .checkbox {
-    @apply h-6 w-6 border border-mypink-300;
+    @apply h-6 w-6 border border-mypink-300 cursor-pointer;
   }
 
   .ipt-text-styles {
