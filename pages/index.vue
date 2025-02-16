@@ -131,7 +131,7 @@
   }
 
   .icon-def {
-    @apply stroke-[1px] text-mypink-500 cursor-pointer;
+    @apply stroke-[1px] text-mypink-500 cursor-pointer hover:scale-110;
   }
 
   .icon-md {
