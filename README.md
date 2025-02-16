@@ -1,14 +1,21 @@
 # AzoomTodo
-
-1. 依存関係をインストールする
+1. 最初に、Gitを使ってリポジトリをローカルにクローンします。ターミナルで以下のコマンドを実行してください。
+```bash
+git clone https://github.com/sakowan/AzoomTodo.git
+```
+2. クローンしたリポジトリのディレクトリに移動するため、以下のコマンドを実行します。
+```bash
+cd AzoomTodo
+```
+3. 依存関係をインストールする
 ```bash
 npm install
 ```
-2. 開発サーバーを起動する
+4. 開発サーバーを起動する
 ```bash
 npm run dev
 ```
-3. ブラウザで開く
+5. ブラウザで開く
 ```bash
 http://localhost:3000
 ```
