@@ -10,7 +10,7 @@
         @keydown.enter.prevent="addNewTodo"
         maxlength="50"
       />
-      <div class="w-1/5 flex justify-end">
+      <div class="icon-holder">
         <CirclePlus 
           class="icon-def icon-md filled-icon"
           @click="addNewTodo"
@@ -51,7 +51,7 @@
         class="item-default item-complete"
       >
         <div class="w-4/5">{{ todo.text }}</div>
-        <div class="w-1/5 flex justify-end gap-x-2">
+        <div class="icon-holder gap-x-2">
           <Undo2 
             class="icon-def icon-sm"
             @click="todoStore.toggleTodo(todo.id)"
@@ -128,6 +128,10 @@
 
   .bottom-gray {
     @apply border-b border-gray-300;
+  }
+
+  .icon-holder {
+    @apply w-1/5 flex justify-end
   }
 
   .icon-def {
