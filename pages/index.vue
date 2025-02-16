@@ -8,6 +8,7 @@
         class="ipt-text-styles"
         v-model="newTodoText"
         @keydown.enter.prevent="addNewTodo"
+        maxlength="50"
       />
       <div class="w-1/5 flex justify-end">
         <CirclePlus 
@@ -24,7 +25,7 @@
         :key="todo.id" 
         class="item-default item-added"
       >
-        <div class="w-1/5">
+        <div class="w-1/6">
           <input 
             type="checkbox" 
             class="checkbox"
